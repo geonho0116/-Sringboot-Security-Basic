@@ -1,0 +1,28 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/security?serverTimezone=Asia/Seoul
+    username: geonho
+    password: planty
+    
+#  mvc:
+#    view:
+#      prefix: /templates/
+#      suffix: .mustache
+# 머스테치를 사용하겠다고 의존성 넣으면 자동으로 경로 잡힘
+
+  jpa:
+    hibernate:
+      ddl-auto: update #create update none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
